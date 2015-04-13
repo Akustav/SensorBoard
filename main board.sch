@@ -8629,6 +8629,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="485" library="con-amp-micromatch" deviceset="MICROMATCH-4" device=""/>
 <part name="PINS2" library="con-amp-micromatch" deviceset="MICROMATCH-4" device=""/>
 <part name="PINS" library="con-amp-micromatch" deviceset="MICROMATCH-4" device=""/>
+<part name="R4" library="rcl" deviceset="R-EU_" device="R0603" value="120"/>
 </parts>
 <sheets>
 <sheet>
@@ -8789,6 +8790,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <instance part="PINS" gate="-2" x="190.5" y="134.62"/>
 <instance part="PINS" gate="-3" x="190.5" y="132.08"/>
 <instance part="PINS" gate="-4" x="190.5" y="129.54"/>
+<instance part="R4" gate="G$1" x="96.52" y="121.92" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -9816,6 +9818,14 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="68.58" y1="91.44" x2="73.66" y2="91.44" width="0.1524" layer="91"/>
 <label x="73.66" y="91.44" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="96.52" y1="116.84" x2="96.52" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="114.3" x2="93.98" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="114.3" x2="99.06" y2="114.3" width="0.1524" layer="91"/>
+<label x="99.06" y="114.3" size="1.778" layer="95"/>
+<junction x="96.52" y="114.3"/>
+</segment>
 </net>
 <net name="A" class="0">
 <segment>
@@ -9828,6 +9838,14 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="68.58" y1="88.9" x2="73.66" y2="88.9" width="0.1524" layer="91"/>
 <label x="73.66" y="88.9" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="96.52" y1="127" x2="96.52" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="129.54" x2="96.52" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="129.54" x2="93.98" y2="129.54" width="0.1524" layer="91"/>
+<label x="99.06" y="129.54" size="1.778" layer="95"/>
+<junction x="96.52" y="129.54"/>
+</segment>
 </net>
 <net name="B11" class="0">
 <segment>
@@ -9836,9 +9854,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="106.68" y="15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="BALL1" gate="-4" pin="S"/>
-<wire x1="200.66" y1="96.52" x2="215.9" y2="96.52" width="0.1524" layer="91"/>
-<label x="215.9" y="96.52" size="1.778" layer="95"/>
+<pinref part="PINS" gate="-3" pin="S"/>
+<wire x1="195.58" y1="132.08" x2="215.9" y2="132.08" width="0.1524" layer="91"/>
+<label x="215.9" y="132.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="B12" class="0">
@@ -9848,9 +9866,9 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="106.68" y="0" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="BALL1" gate="-3" pin="S"/>
-<wire x1="200.66" y1="99.06" x2="215.9" y2="99.06" width="0.1524" layer="91"/>
-<label x="215.9" y="99.06" size="1.778" layer="95"/>
+<pinref part="PINS" gate="-4" pin="S"/>
+<wire x1="195.58" y1="129.54" x2="215.9" y2="129.54" width="0.1524" layer="91"/>
+<label x="215.9" y="129.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="B32" class="0">
@@ -9867,26 +9885,26 @@ We've spent an enormous amount of time creating and checking these footprints an
 </net>
 <net name="B21" class="0">
 <segment>
-<pinref part="PINS" gate="-3" pin="S"/>
-<wire x1="195.58" y1="132.08" x2="215.9" y2="132.08" width="0.1524" layer="91"/>
-<label x="215.9" y="132.08" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="104.14" y1="38.1" x2="111.76" y2="38.1" width="0.1524" layer="91"/>
 <label x="106.68" y="38.1" size="1.778" layer="95"/>
 <pinref part="ATMEGA3" gate="G$1" pin="PB0"/>
 </segment>
+<segment>
+<pinref part="BALL1" gate="-4" pin="S"/>
+<wire x1="200.66" y1="96.52" x2="215.9" y2="96.52" width="0.1524" layer="91"/>
+<label x="215.9" y="96.52" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="B22" class="0">
-<segment>
-<pinref part="PINS" gate="-4" pin="S"/>
-<wire x1="195.58" y1="129.54" x2="215.9" y2="129.54" width="0.1524" layer="91"/>
-<label x="215.9" y="129.54" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="ATMEGA3" gate="G$1" pin="PB4"/>
 <wire x1="104.14" y1="27.94" x2="111.76" y2="27.94" width="0.1524" layer="91"/>
 <label x="106.68" y="27.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="BALL1" gate="-3" pin="S"/>
+<wire x1="200.66" y1="99.06" x2="215.9" y2="99.06" width="0.1524" layer="91"/>
+<label x="215.9" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="B31" class="0">
