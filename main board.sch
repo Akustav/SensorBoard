@@ -8627,7 +8627,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="C2" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
 <part name="BALL1" library="con-amp-micromatch" deviceset="MICROMATCH-4" device=""/>
 <part name="485" library="con-amp-micromatch" deviceset="MICROMATCH-4" device=""/>
-<part name="UART1" library="con-amp-micromatch" deviceset="MICROMATCH-4" device=""/>
+<part name="PINS2" library="con-amp-micromatch" deviceset="MICROMATCH-4" device=""/>
 <part name="PINS" library="con-amp-micromatch" deviceset="MICROMATCH-4" device=""/>
 </parts>
 <sheets>
@@ -8781,10 +8781,10 @@ We've spent an enormous amount of time creating and checking these footprints an
 <instance part="485" gate="-2" x="63.5" y="93.98"/>
 <instance part="485" gate="-3" x="63.5" y="91.44"/>
 <instance part="485" gate="-4" x="63.5" y="88.9"/>
-<instance part="UART1" gate="-1" x="190.5" y="121.92"/>
-<instance part="UART1" gate="-2" x="190.5" y="119.38"/>
-<instance part="UART1" gate="-3" x="190.5" y="116.84"/>
-<instance part="UART1" gate="-4" x="190.5" y="114.3"/>
+<instance part="PINS2" gate="-1" x="190.5" y="121.92"/>
+<instance part="PINS2" gate="-2" x="190.5" y="119.38"/>
+<instance part="PINS2" gate="-3" x="190.5" y="116.84"/>
+<instance part="PINS2" gate="-4" x="190.5" y="114.3"/>
 <instance part="PINS" gate="-1" x="190.5" y="137.16"/>
 <instance part="PINS" gate="-2" x="190.5" y="134.62"/>
 <instance part="PINS" gate="-3" x="190.5" y="132.08"/>
@@ -9010,7 +9010,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="215.9" y="137.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="UART1" gate="-1" pin="S"/>
+<pinref part="PINS2" gate="-1" pin="S"/>
 <wire x1="195.58" y1="121.92" x2="215.9" y2="121.92" width="0.1524" layer="91"/>
 <label x="215.9" y="121.92" size="1.778" layer="95"/>
 </segment>
@@ -9158,7 +9158,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="215.9" y="134.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="UART1" gate="-2" pin="S"/>
+<pinref part="PINS2" gate="-2" pin="S"/>
 <wire x1="195.58" y1="119.38" x2="215.9" y2="119.38" width="0.1524" layer="91"/>
 <label x="215.9" y="119.38" size="1.778" layer="95"/>
 </segment>
@@ -9860,7 +9860,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="106.68" y="-12.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="UART1" gate="-3" pin="S"/>
+<pinref part="PINS2" gate="-3" pin="S"/>
 <wire x1="195.58" y1="116.84" x2="215.9" y2="116.84" width="0.1524" layer="91"/>
 <label x="215.9" y="116.84" size="1.778" layer="95"/>
 </segment>
@@ -9896,7 +9896,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <label x="106.68" y="-2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="UART1" gate="-4" pin="S"/>
+<pinref part="PINS2" gate="-4" pin="S"/>
 <wire x1="195.58" y1="114.3" x2="215.9" y2="114.3" width="0.1524" layer="91"/>
 <label x="215.9" y="114.3" size="1.778" layer="95"/>
 </segment>

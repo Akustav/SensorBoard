@@ -1959,7 +1959,7 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="30.9" y="10.09" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="OC_FARNELL" value="3784629" x="30.9" y="10.09" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="UART1" library="con-amp-micromatch" package="MICROMATCH-4" value="MICROMATCH-4" x="29.51" y="2.88">
+<element name="PINS2" library="con-amp-micromatch" package="MICROMATCH-4" value="MICROMATCH-4" x="29.51" y="2.88">
 <attribute name="OC_NEWARK" value="19R8124" x="29.51" y="2.88" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="7-215464-4" x="29.51" y="2.88" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="29.51" y="2.88" size="1.778" layer="27" display="off"/>
@@ -2097,7 +2097,7 @@ design rules under a new name.</description>
 <contactref element="PINS" pad="1"/>
 <via x="19.16" y="45.88" extent="1-16" drill="0.5"/>
 <via x="5.04" y="47.22" extent="1-16" drill="0.5"/>
-<contactref element="UART1" pad="1"/>
+<contactref element="PINS2" pad="1"/>
 <via x="20.31" y="35.78" extent="1-16" drill="0.5"/>
 <via x="15.05" y="23.99" extent="1-16" drill="0.5"/>
 <via x="21.55" y="47.85" extent="1-16" drill="0.5"/>
@@ -2253,7 +2253,7 @@ design rules under a new name.</description>
 <wire x1="3.81" y1="49.31" x2="0.75" y2="46.25" width="0.8128" layer="1"/>
 <wire x1="0.75" y1="46.25" x2="0.75" y2="40.655" width="0.8128" layer="1"/>
 <wire x1="0.75" y1="40.655" x2="2.4" y2="39.005" width="0.8128" layer="1"/>
-<contactref element="UART1" pad="2"/>
+<contactref element="PINS2" pad="2"/>
 <wire x1="30.145" y1="1.61" x2="30.145" y2="4.905" width="0.6096" layer="16"/>
 <wire x1="30.145" y1="4.905" x2="29.49" y2="5.56" width="0.6096" layer="16"/>
 <wire x1="29.49" y1="5.56" x2="26.57" y2="5.56" width="0.6096" layer="16"/>
@@ -2982,7 +2982,7 @@ design rules under a new name.</description>
 <wire x1="18.67" y1="30.79" x2="18.67" y2="24.09" width="0.3048" layer="16"/>
 <wire x1="18.67" y1="24.09" x2="22.49" y2="20.27" width="0.3048" layer="16"/>
 <wire x1="22.49" y1="20.27" x2="22.49" y2="6.725" width="0.3048" layer="16"/>
-<contactref element="UART1" pad="3"/>
+<contactref element="PINS2" pad="3"/>
 <wire x1="22.49" y1="6.725" x2="25.065" y2="4.15" width="0.3048" layer="16"/>
 <wire x1="25.065" y1="4.15" x2="28.875" y2="4.15" width="0.3048" layer="16"/>
 </signal>
@@ -3017,7 +3017,7 @@ design rules under a new name.</description>
 <wire x1="17.96" y1="23.89" x2="21.8" y2="20.05" width="0.3048" layer="16"/>
 <wire x1="21.8" y1="20.05" x2="21.8" y2="6.26" width="0.3048" layer="16"/>
 <wire x1="21.8" y1="6.26" x2="26.45" y2="1.61" width="0.3048" layer="16"/>
-<contactref element="UART1" pad="4"/>
+<contactref element="PINS2" pad="4"/>
 <wire x1="26.45" y1="1.61" x2="27.605" y2="1.61" width="0.3048" layer="16"/>
 <wire x1="17.96" y1="23.89" x2="17.96" y2="31.05" width="0.3048" layer="16"/>
 <wire x1="20.49" y1="31.6274" x2="20.41" y2="31.7074" width="0.3048" layer="1"/>
