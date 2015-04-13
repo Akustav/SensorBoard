@@ -8622,14 +8622,13 @@ We've spent an enormous amount of time creating and checking these footprints an
 <part name="GND28" library="supply1" deviceset="GND" device=""/>
 <part name="GND29" library="supply1" deviceset="GND" device=""/>
 <part name="GND30" library="supply1" deviceset="GND" device=""/>
-<part name="GND31" library="supply1" deviceset="GND" device=""/>
-<part name="SUPPLY12" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="ATMEGA3" library="SparkFun" deviceset="ATMEGA8U2" device="AU" value="ATMEGA32U2AU"/>
-<part name="C1" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0603" value="100nF"/>
 <part name="BALL1" library="con-amp-micromatch" deviceset="MICROMATCH-4" device=""/>
 <part name="485" library="con-amp-micromatch" deviceset="MICROMATCH-4" device=""/>
+<part name="UART1" library="con-amp-micromatch" deviceset="MICROMATCH-4" device=""/>
+<part name="PINS" library="con-amp-micromatch" deviceset="MICROMATCH-4" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8771,11 +8770,8 @@ We've spent an enormous amount of time creating and checking these footprints an
 <instance part="GND28" gate="1" x="124.46" y="83.82"/>
 <instance part="GND29" gate="1" x="119.38" y="121.92"/>
 <instance part="GND30" gate="1" x="83.82" y="78.74"/>
-<instance part="GND31" gate="1" x="91.44" y="78.74"/>
-<instance part="SUPPLY12" gate="G$1" x="91.44" y="104.14"/>
 <instance part="GND2" gate="1" x="-12.7" y="-48.26"/>
 <instance part="ATMEGA3" gate="G$1" x="83.82" y="10.16"/>
-<instance part="C1" gate="G$1" x="91.44" y="91.44"/>
 <instance part="C2" gate="G$1" x="124.46" y="93.98"/>
 <instance part="BALL1" gate="-1" x="195.58" y="104.14"/>
 <instance part="BALL1" gate="-2" x="195.58" y="101.6"/>
@@ -8785,6 +8781,14 @@ We've spent an enormous amount of time creating and checking these footprints an
 <instance part="485" gate="-2" x="63.5" y="93.98"/>
 <instance part="485" gate="-3" x="63.5" y="91.44"/>
 <instance part="485" gate="-4" x="63.5" y="88.9"/>
+<instance part="UART1" gate="-1" x="190.5" y="121.92"/>
+<instance part="UART1" gate="-2" x="190.5" y="119.38"/>
+<instance part="UART1" gate="-3" x="190.5" y="116.84"/>
+<instance part="UART1" gate="-4" x="190.5" y="114.3"/>
+<instance part="PINS" gate="-1" x="190.5" y="137.16"/>
+<instance part="PINS" gate="-2" x="190.5" y="134.62"/>
+<instance part="PINS" gate="-3" x="190.5" y="132.08"/>
+<instance part="PINS" gate="-4" x="190.5" y="129.54"/>
 </instances>
 <busses>
 </busses>
@@ -8964,11 +8968,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <pinref part="GND29" gate="1" pin="GND"/>
 </segment>
 <segment>
-<wire x1="91.44" y1="86.36" x2="91.44" y2="81.28" width="0.1524" layer="91"/>
-<pinref part="GND31" gate="1" pin="GND"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-</segment>
-<segment>
 <pinref part="X1" gate="S" pin="S4"/>
 <wire x1="-27.94" y1="-30.48" x2="-27.94" y2="-33.02" width="0.1524" layer="91"/>
 <wire x1="-27.94" y1="-33.02" x2="-25.4" y2="-33.02" width="0.1524" layer="91"/>
@@ -9005,6 +9004,16 @@ We've spent an enormous amount of time creating and checking these footprints an
 <pinref part="485" gate="-2" pin="S"/>
 <wire x1="83.82" y1="93.98" x2="68.58" y2="93.98" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="PINS" gate="-1" pin="S"/>
+<wire x1="195.58" y1="137.16" x2="215.9" y2="137.16" width="0.1524" layer="91"/>
+<label x="215.9" y="137.16" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="UART1" gate="-1" pin="S"/>
+<wire x1="195.58" y1="121.92" x2="215.9" y2="121.92" width="0.1524" layer="91"/>
+<label x="215.9" y="121.92" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$2" class="0">
 <segment>
@@ -9024,12 +9033,19 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="-7.62" y1="-15.24" x2="-17.78" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="PREFUSE" class="0">
 <segment>
 <pinref part="X1" gate="G$1" pin="1"/>
 <pinref part="F1" gate="G$1" pin="1"/>
 <wire x1="-17.78" y1="-12.7" x2="-10.16" y2="-12.7" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="-12.7" x2="-10.16" y2="-5.08" width="0.1524" layer="91"/>
+<label x="-10.16" y="-12.7" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="91.44" y1="96.52" x2="91.44" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="96.52" x2="91.44" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="485" gate="-1" pin="S"/>
+<label x="91.44" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -9132,18 +9148,19 @@ We've spent an enormous amount of time creating and checking these footprints an
 <pinref part="C2" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="SUPPLY12" gate="G$1" pin="VCC"/>
-<wire x1="91.44" y1="93.98" x2="91.44" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="96.52" x2="91.44" y2="104.14" width="0.1524" layer="91"/>
-<junction x="91.44" y="96.52"/>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="68.58" y1="96.52" x2="91.44" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="485" gate="-1" pin="S"/>
-</segment>
-<segment>
 <pinref part="BALL1" gate="-2" pin="S"/>
 <wire x1="200.66" y1="101.6" x2="215.9" y2="101.6" width="0.1524" layer="91"/>
 <label x="215.9" y="101.6" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="PINS" gate="-2" pin="S"/>
+<wire x1="195.58" y1="134.62" x2="215.9" y2="134.62" width="0.1524" layer="91"/>
+<label x="215.9" y="134.62" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="UART1" gate="-2" pin="S"/>
+<wire x1="195.58" y1="119.38" x2="215.9" y2="119.38" width="0.1524" layer="91"/>
+<label x="215.9" y="119.38" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D+" class="0">
@@ -9814,26 +9831,74 @@ We've spent an enormous amount of time creating and checking these footprints an
 </net>
 <net name="B11" class="0">
 <segment>
-<pinref part="BALL1" gate="-3" pin="S"/>
-<wire x1="200.66" y1="99.06" x2="215.9" y2="99.06" width="0.1524" layer="91"/>
-<label x="215.9" y="99.06" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="ATMEGA3" gate="G$1" pin="PC2"/>
 <wire x1="104.14" y1="15.24" x2="111.76" y2="15.24" width="0.1524" layer="91"/>
 <label x="106.68" y="15.24" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="B12" class="0">
 <segment>
 <pinref part="BALL1" gate="-4" pin="S"/>
 <wire x1="200.66" y1="96.52" x2="215.9" y2="96.52" width="0.1524" layer="91"/>
 <label x="215.9" y="96.52" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="B12" class="0">
 <segment>
 <pinref part="ATMEGA3" gate="G$1" pin="PD0"/>
 <wire x1="104.14" y1="0" x2="111.76" y2="0" width="0.1524" layer="91"/>
 <label x="106.68" y="0" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="BALL1" gate="-3" pin="S"/>
+<wire x1="200.66" y1="99.06" x2="215.9" y2="99.06" width="0.1524" layer="91"/>
+<label x="215.9" y="99.06" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="B32" class="0">
+<segment>
+<pinref part="ATMEGA3" gate="G$1" pin="PD5"/>
+<wire x1="104.14" y1="-12.7" x2="111.76" y2="-12.7" width="0.1524" layer="91"/>
+<label x="106.68" y="-12.7" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="UART1" gate="-3" pin="S"/>
+<wire x1="195.58" y1="116.84" x2="215.9" y2="116.84" width="0.1524" layer="91"/>
+<label x="215.9" y="116.84" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="B21" class="0">
+<segment>
+<pinref part="PINS" gate="-3" pin="S"/>
+<wire x1="195.58" y1="132.08" x2="215.9" y2="132.08" width="0.1524" layer="91"/>
+<label x="215.9" y="132.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="104.14" y1="38.1" x2="111.76" y2="38.1" width="0.1524" layer="91"/>
+<label x="106.68" y="38.1" size="1.778" layer="95"/>
+<pinref part="ATMEGA3" gate="G$1" pin="PB0"/>
+</segment>
+</net>
+<net name="B22" class="0">
+<segment>
+<pinref part="PINS" gate="-4" pin="S"/>
+<wire x1="195.58" y1="129.54" x2="215.9" y2="129.54" width="0.1524" layer="91"/>
+<label x="215.9" y="129.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="ATMEGA3" gate="G$1" pin="PB4"/>
+<wire x1="104.14" y1="27.94" x2="111.76" y2="27.94" width="0.1524" layer="91"/>
+<label x="106.68" y="27.94" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="B31" class="0">
+<segment>
+<pinref part="ATMEGA3" gate="G$1" pin="PD1"/>
+<wire x1="104.14" y1="-2.54" x2="111.76" y2="-2.54" width="0.1524" layer="91"/>
+<label x="106.68" y="-2.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="UART1" gate="-4" pin="S"/>
+<wire x1="195.58" y1="114.3" x2="215.9" y2="114.3" width="0.1524" layer="91"/>
+<label x="215.9" y="114.3" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
